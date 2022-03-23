@@ -1,0 +1,5 @@
+from google.colab import drive
+drive.mount('/content/gdrive') 
+with open('/content/gdrive/MyDrive/Data/irish_lyrics.txt','r') as f:
+  data=f.read()
+corpus=data.split("\n")
