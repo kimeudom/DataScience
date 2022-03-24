@@ -9,7 +9,7 @@ Mal_rows <- Mal_conf[, seq(from = 5, to = 16, by = 1)]
 Mal_output <- cbind(County_code = Mal_conf$Orgunit.ID,
                     County = Mal_conf$Orgunit.name,
                     Prevalence = Mal_rows)
-a <- c("County", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+a <- c("County Code","County", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 names(Mal_output) <- a
 
 ## Output
