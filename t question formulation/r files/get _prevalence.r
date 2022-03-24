@@ -45,7 +45,7 @@ ALl_data <-  list(HIV = HIV,
 # Getting the defaulters KmLPBDUi48L
 TB_conf <- TB[TB$Data.ID == "KmLPBDUi48L" | TB$Data.ID == "VihTrdMMli8",]
 TB_rows <- TB_conf[, seq(from = 5, to = 16, by = 1)]
-TB_rows <- rowSums(TB_rows, na.rm = TRUE)
+TB_rows <- colSums(TB_rows, na.rm = TRUE)
 TB_output <- cbind(County_code = TB_conf$Orgunit.ID,
                    County = TB_conf$Orgunit.name,
                    Prevalence =TB_rows)
@@ -59,7 +59,7 @@ write.table(TB_output,
 ## HIV Per county
 HIV_conf <- HIV[HIV$Data.ID == "NYkr7LlxmUg",]
 HIV_rows <- HIV_conf[, seq(from = 5, to = 16, by = 1)]
-HIV_rows <- rowSums(HIV_rows, na.rm = TRUE)
+HIV_rows <- colSums(HIV_rows, na.rm = TRUE)
 HIV_output <- cbind(County_code = HIV_conf$Orgunit.ID,
                    County = HIV_conf$Orgunit.name,
                    Prevalence =HIV_rows)
@@ -70,7 +70,7 @@ write.table(HIV_output,
 ## Malaria
 Mal_conf <- Malaria[Malaria$Data.ID == "OoakJhWiyZp",]
 Mal_rows <- Mal_conf[, seq(from = 5, to = 16, by = 1)]
-Mal_rows <- rowSums(Mal_rows, na.rm = TRUE)
+Mal_rows <- colSums(Mal_rows, na.rm = TRUE)
 Mal_output <- cbind(County_code = Mal_conf$Orgunit.ID,
                     County = Mal_conf$Orgunit.name,
                     Prevalence = Mal_rows)
