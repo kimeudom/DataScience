@@ -5,4 +5,4 @@ currently incomplete
 ## Credits
 
 kalundaah@github.com
-kimeu-ke@github.com
+kimeudom@github.com
